@@ -1,22 +1,24 @@
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import Workflow from "./components/Workflow";
-import Footer from "./components/Footer";
-import Testimonials from "./components/Testimonials";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './Pages/Home';
+import NavBar from './components/Navbar';
+import ContactPage from './Pages/Contact';
 
-const App = () => {
+
+function App() {
   return (
     <>
-      <Navbar />
-      <div className="max-w-7xl mx-auto pt-20 px-6">
-        <HeroSection />
-        <Workflow />
-        
-        <Testimonials />
-        <Footer />
-      </div>
+    <NavBar/>
+    <div className="max-w-7xl mx-auto pt-20 px-6">
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </Router>
+    </div>
     </>
   );
-};
-
+} 
 export default App;
+
+

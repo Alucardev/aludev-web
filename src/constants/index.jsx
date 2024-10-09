@@ -2,12 +2,12 @@ import user1 from "../assets/profile-pictures/user1.jpg";
 import user2 from "../assets/profile-pictures/user2.jpg";
 
 export const navItems = [
-  { label: "Inicio", href: "#" },
-  { label: "Sobre nosotros", href: "#" },
-  { label: "Contacto", href: "#" },
+  { label: "Inicio", href: "/" },
+  { label: "Contacto", href: "Contact" },
+  { label: "Sobre nosotros", href: "" }
 ];
 
-export const testimonials = [
+export const AboutUsList = [
   {
     user: "Agustin Aiello",
     company: "Founder",
