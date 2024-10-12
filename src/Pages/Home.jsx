@@ -1,7 +1,7 @@
 import HeroSection from "../components/HeroSection";;
 import AboutUs from "../components/AboutUs";
 import WorkFlow from "../components/Workflow"
-import Footer from "../components/Footer";
+import ContactForm from "../components/ContactForm";
 
 const HomePage = () => {
 
@@ -10,7 +10,8 @@ const HomePage = () => {
       <HeroSection />
       <WorkFlow/>
       <AboutUs />
-      <Footer />
+      <ContactForm />
+  
     </>
     )
 }
