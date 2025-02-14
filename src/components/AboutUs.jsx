@@ -4,7 +4,7 @@ const AboutUs = () => {
   return (
     <div className="mt-20 tracking-wide">
       <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center my-10 lg:my-20">
-        Quienes somos?
+        Algunos de nuestros trabajos
       </h2>
       <div className="flex flex-wrap justify-center">
         {AboutUsList.map((AboutUsList, index) => (
