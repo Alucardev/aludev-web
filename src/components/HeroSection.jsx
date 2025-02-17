@@ -1,5 +1,4 @@
-import video1 from "../assets/video1.mp4";
-import video2 from "../assets/video2.mp4";
+import desktop from "../assets/desktop.jpg";
 
 const HeroSection = () => {
   return (
@@ -20,29 +19,20 @@ const HeroSection = () => {
         >
           Contacto
         </a>
-        <a href="#" className="py-3 px-4 mx-3 rounded-md border border-[#A84D76] text-[#A84D76] hover:bg-[#A84D76] hover:text-white transition">
+        <a
+          href="#"
+          className="py-3 px-4 mx-3 rounded-md border border-[#A84D76] text-[#A84D76] hover:bg-[#A84D76] hover:text-white transition"
+        >
           Más información
         </a>
       </div>
-      <div className="flex mt-10 justify-center">
-        <video
-          autoPlay
-          loop
-          muted
-          className="rounded-lg w-1/2 border border-[#A84D76] shadow-sm shadow-[#A84D76] mx-2 my-4"
-        >
-          <source src={video1} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <video
-          autoPlay
-          loop
-          muted
-          className="rounded-lg w-1/2 border border-[#A84D76] shadow-sm shadow-[#A84D76] mx-2 my-4"
-        >
-          <source src={video2} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      {/* Contenedor de la imagen con ancho completo */}
+      <div className="w-screen mt-10">
+        <img
+          src={desktop}
+          alt="Desktop"
+          className="rounded-lg w-full h-80 object-cover border border-[#A84D76] shadow-sm shadow-[#A84D76]"
+        />
       </div>
     </div>
   );
