@@ -8,3 +8,148 @@
   font-family: "Poppins", sans-serif;
   color-scheme: dark;
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #A84D76, #842d56);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #b85d86, #943d66);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection Styling */
+::selection {
+  background: rgba(168, 77, 118, 0.3);
+  color: white;
+}
+
+/* Focus Styles */
+*:focus {
+  outline: 2px solid #A84D76;
+  outline-offset: 2px;
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(168, 77, 118, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(168, 77, 118, 0.6);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Gradient Text Animation */
+.gradient-text {
+  background: linear-gradient(45deg, #A84D76, #842d56, #A84D76);
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Glassmorphism Effect */
+.glass {
+  background: rgba(31, 41, 55, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(75, 85, 99, 0.3);
+}
+
+/* Hover Effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Text Gradients */
+.text-gradient-primary {
+  background: linear-gradient(135deg, #A84D76 0%, #842d56 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-secondary {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply bg-gradient-to-r from-[#A84D76] to-[#842d56] text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:opacity-90 hover:scale-105 transform shadow-lg hover:shadow-xl;
+}
+
+.btn-secondary {
+  @apply border-2 border-[#A84D76] text-[#A84D76] px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-[#A84D76] hover:text-white transform hover:scale-105;
+}
+
+/* Card Styles */
+.card {
+  @apply bg-neutral-900/80 rounded-2xl border border-neutral-700/50 p-6 transition-all duration-300 hover:border-[#A84D76]/50 hover:bg-neutral-900;
+}
+
+/* Input Styles */
+.input-field {
+  @apply w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg focus:outline-none focus:border-[#A84D76] focus:ring-2 focus:ring-[#A84D76]/20 transition-all duration-300 text-white placeholder-neutral-500;
+}
+
+/* Responsive Typography */
+.text-responsive-xl {
+  @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl;
+}
+
+.text-responsive-lg {
+  @apply text-xl sm:text-2xl lg:text-3xl;
+}
+
+.text-responsive-md {
+  @apply text-lg sm:text-xl lg:text-2xl;
+}
